@@ -1,0 +1,18 @@
+{
+    "module": "v-homeDynamic",
+    "layout": {
+        "dynamic": {
+            "initRequest": {
+                "url": "/views/dashboard/layoutData.json",
+                "method": "GET",
+                "params": {},
+                "resultSet": {
+                    "spanField": "width",
+                    "heightField": "height",
+                    "borderField": "border",
+                    "urlField": "cardUrl"
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,14 @@
+[
+  {
+    "url": "aaa_bbb_ccc_ddd",
+    "params": {
+      "name": "aaa"
+    }
+  },
+  {
+    "url": "demo/demo_data",
+    "params": {
+      "sex": "man"
+    }
+  }
+]

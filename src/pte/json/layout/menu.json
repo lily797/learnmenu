@@ -1,0 +1,270 @@
+{
+	"code": "200",
+	"data": [{
+		"leaf": true,
+		"pageCode": "ivew-website",
+		"pageCodeAlias": "ivew-website",
+		"parentPageCode": "ui-test",
+		"title": "ivew链接",
+		"target": "_self",
+		"toUrl": ""
+	}, {
+		"leaf": true,
+		"pageCode": "out-website",
+		"pageCodeAlias": "out-website",
+		"parentPageCode": "ui-test",
+		"title": "百度链接",
+		"target": "_self",
+		"toUrl": ""
+	}, {
+		"leaf": true,
+		"pageCode": "tabs-page",
+		"pageCodeAlias": "tabs-page",
+		"parentPageCode": "ui-test",
+		"title": "选项卡",
+		"toUrl": "views/modulePage/resolver"
+	},
+	 {
+		"leaf": true,
+		"pageCode": "page-management",
+		"pageCodeAlias": "page-management",
+		"parentPageCode": "-1",
+		"title": "页面管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "v_cardList5",
+		"pageCodeAlias": "v_cardList5",
+		"params": {
+			"toRequest": "/pte/json/v_cardList5/index.json",
+			"pageCode": "v_cardList5"
+		},
+		"parentPageCode": "ui-test",
+		"title": "卡片5",
+		"toUrl": "views/modulePage/resolver"
+},
+{
+		"leaf": true,
+		"pageCode": "v_formTabs",
+		"pageCodeAlias": "v_formTabs",
+		"params": {
+			"toRequest": "/pte/json/v_formTabs/index.json",
+			"pageCode": "v_formTabs"
+		},
+		"parentPageCode": "ui-test",
+		"title": "表单-选项卡（上下）",
+		"toUrl": "views/modulePage/resolver"
+	},
+{
+		"leaf": true,
+		"pageCode": "v_steps",
+		"pageCodeAlias": "v_steps",
+		"params": {
+			"toRequest": "/pte/json/v_steps/index.json",
+			"pageCode": "v_steps"
+		},
+		"parentPageCode": "ui-test",
+		"title": "步骤条",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "assembleForm",
+		"pageCodeAlias": "assembleForm",
+		"params": {
+			"toRequest": "/pte/json/v_form_editableDataGrid_btn/index.json",
+			"pageCode": "assembleForm"
+		},
+		"parentPageCode": "ui-test",
+		"title": "提交-编辑表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"icon": "shouye2",
+		"leaf": true,
+		"pageCode": "dashboard",
+		"pageCodeAlias": "dashboard",
+		"parentPageCode": "-1",
+		"title": "首页",
+		"toUrl": "views/dashboard/index.vue"
+	}, {
+		"leaf": true,
+		"pageCode": "test-query",
+		"pageCodeAlias": "test-query",
+		"parentPageCode": "ui-test",
+		"title": "查询表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-authority",
+		"pageCodeAlias": "test-authority",
+		"parentPageCode": "ui-test",
+		"title": "查询表格(权限)",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "system-param-config",
+		"pageCodeAlias": "system-param-config",
+		"params": {
+			"toRequest": "/pte/json/system-param-config/index.json",
+			"pageCode": "system-param-config"
+		},
+		"parentPageCode": "ui-test",
+		"title": "系统参数配置",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": false,
+		"pageCode": "ui-test",
+		"pageCodeAlias": "ui-test",
+		"params": {
+			"pageCode": "ui-test"
+		},
+		"parentPageCode": "-1",
+		"title": "UI 测试（勿删）"
+	}, {
+		"leaf": true,
+		"pageCode": "test-search_dynamic",
+		"pageCodeAlias": "test-search_dynamic",
+		"params": {
+			"toRequest": "/pte/json/lr_search_dynamic/lr_search_dynamic.json",
+			"pageCode": "test-search_dynamic"
+		},
+		"parentPageCode": "ui-test",
+		"title": "动态查询表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-setSearchform",
+		"pageCodeAlias": "test-setSearchform",
+		"params": {
+			"toRequest": "/pte/json/v_form_btn_dynamic/v_form_btn_dynamic.json",
+			"pageCode": "test-setSearchform"
+		},
+		"parentPageCode": "ui-test",
+		"title": "表单区域",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-transfer",
+		"pageCodeAlias": "test-transfer",
+		"params": {
+			"toRequest": "/pte/json/lr_transferTable/index.json",
+			"pageCode": "test-transfer"
+		},
+		"parentPageCode": "ui-test",
+		"title": "穿梭框",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-treeMenu",
+		"pageCodeAlias": "test-treeMenu",
+		"params": {
+			"toRequest": "/pte/json/tree/lr_tree_dynamic.json",
+			"pageCode": "test-treeMenu"
+		},
+		"parentPageCode": "ui-test",
+		"title": "树形菜单模板",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "eee",
+		"pageCodeAlias": "eee",
+		"params": {
+			"toRequest": "/pte/json/tags/v_tags_dynamic.json",
+			"pageCode": "eee"
+		},
+		"parentPageCode": "ui-test",
+		"title": "动态标签",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-dataTable",
+		"pageCodeAlias": "test-dataTable",
+		"params": {
+			"toRequest": "/pte/json/datagrid.json",
+			"pageCode": "test-dataTable"
+		},
+		"parentPageCode": "ui-test",
+		"title": "数据表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "editSearchForm",
+		"pageCodeAlias": "editSearchForm",
+		"parentPageCode": "ui-test",
+		"title": "查询-编辑表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-editor",
+		"pageCodeAlias": "test-editor",
+		"params": {
+			"pageCode": "test-editor"
+		},
+		"parentPageCode": "ui-test",
+		"title": "测试可编辑表格",
+		"toUrl": "views/editTable/index.vue"
+	}, {
+		"leaf": true,
+		"pageCode": "test-00001111",
+		"pageCodeAlias": "test-00001111",
+		"params": {
+			"pageCode": "test-00001111",
+			"toRequest": "/pte/json/v_selectableTree.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "选择树",
+		"toUrl": "views/modulePage/resolver"
+	},{
+		"leaf": true,
+		"pageCode": "homeDynamic",
+		"pageCodeAlias": "homeDynamic",
+		"parentPageCode": "ui-test",
+		"title": "v_homeDynamic",
+		"toUrl": "/pte/json/v_homeDynamic/index.json"
+	},{
+		"leaf": true,
+		"pageCode": "test-cardList2",
+		"pageCodeAlias": "test-cardList2",
+		"params": {
+			"toRequest": "/pte/json/v_cardList2/index.json",
+			"pageCode": "test-cardList2"
+		},
+		"parentPageCode": "ui-test",
+		"title": "卡片列表2",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "v_cardList4",
+		"pageCodeAlias": "v_cardList4",
+		"params": {
+			"toRequest": "/pte/json/v_cardList4/index.json",
+			"pageCode": "v_cardList4"
+		},
+		"parentPageCode": "ui-test",
+		"title": "卡片4",
+		"toUrl": "views/modulePage/resolver"
+	},
+	{
+		"leaf": true,
+		"pageCode": "v_cardList",
+		"pageCodeAlias": "v_cardList",
+		"params": {
+			"toRequest": "/pte/json/v_cardList/index.json",
+			"pageCode": "v_cardList"
+		},
+		"parentPageCode": "ui-test",
+		"title": "卡片",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "relationFrom",
+		"pageCodeAlias": "relationFrom",
+		"params": {
+			"toRequest": "/pte/json/v_relation_form/index.json",
+			"pageCode": "relationFrom"
+		},
+		"parentPageCode": "ui-test",
+		"title": "关系型表单",
+		"toUrl": "views/modulePage/resolver"
+	}],
+	"message": "操作成功！"
+}

@@ -1,0 +1,17 @@
+{
+	"code": "200",
+	"data": {
+		"defaultRole": "ADMIN",
+		"employeeCode": "123",
+		"image": "",
+		"isEnabled": "1",
+		"language": "zh_CN",
+		"layout": "left-menu",
+		"pagesize": 10,
+		"rowNo": 0,
+		"skinCode": "mazarine",
+		"userCode": "admin",
+		"userName": "系统管理员"
+	},
+	"message": "操作成功！"
+}

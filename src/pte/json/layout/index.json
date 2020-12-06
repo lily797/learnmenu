@@ -1,0 +1,130 @@
+{
+  "module": "v-topMenu-dynamic",
+	"layout": {
+    "appHeader": {
+      "doRequest": {
+        "url": "/pte/json/layout/menu.json",
+        "method": "get"
+      },
+      "Avatar": {
+        "imageField":"image",
+        "doRequest": {
+          "url":"/pte/json/layout/userInfo.json"
+        }
+      },
+      "systemInfo": {
+        "icon": "el-icon-share",
+        "image": "sunline_logo.png",
+        "width": 150,
+        "title":""
+      },
+      "search": true,
+      "fullscreen": true,
+      "themes": {
+        "enable": true,
+        "options": [
+          {
+            "value": "default"
+          },
+          {
+            "value": "darkBlue"
+          },
+          {
+            "value": "blue"
+          },
+          {
+            "value": "purple"
+          },
+          {
+            "value": "red"
+          }
+        ],
+        "doRequest": {
+          "url":"/pte/json/layout/theme.json"
+        }
+      },
+      "language": {
+        "enable": true,
+        "options": [
+          {
+            "key": "zh",
+            "title": "simplifiedChinese",
+            "icon": "flag-zh"
+          },
+          {
+            "key": "en",
+            "title": "english",
+            "icon": "flag-en"
+          }
+        ],
+        "doRequest": {
+          "url":"/pte/json/layout/language.json"
+        }
+      },
+      "userInfo": [
+        {
+          "type": "custom",
+          "icon": "el-icon-info",
+          "label": "自定义custom",
+          "toRequest": {
+            "url": "user-add",
+            "method": "get",
+            "target":"navTab"
+          },
+          "props": {
+            "width": "65%",
+            "title": "标题"
+          }
+        },
+        {
+          "type": "custom",
+          "icon": "el-icon-info",
+          "label": "直接发送请求",
+          "doRequest": {
+            "url": "pte/json/layout/logout.json",
+            "method": "get"
+          },
+          "confirm": {
+            "title": "提示信息",
+            "msg": "直接发送请求吗？",
+            "confirmButtonText": "确定",
+            "cancelButtonText": "取消"
+          }
+        },
+        {
+          "type": "logout",
+          "icon": "el-icon-info",
+          "label": "退出登录",
+          "doRequest": {
+            "url": "pte/json/layout/logout.json"
+          }
+        }
+      ]
+    },
+    "appSidebar": {
+      "search": {
+        "enable": false
+      },
+      "menu":{
+        "doRequest": {
+          "url": "/pte/json/layout/menu.json",
+          "method": "get",
+          "resultSet":{
+            "idField": "pageCode",
+            "pIdField": "parentPageCode",
+            "isLeafField": "leaf",
+            "titleField": "title",
+            "targetField": "target",
+            "externalField": "external",
+            "toUrlField": "toUrl",
+            "iconField": "icon"
+          }
+        }
+      }
+    },
+    "appMain": {},
+    "appFooter": {
+      "copyright": ""
+    }
+  }
+}

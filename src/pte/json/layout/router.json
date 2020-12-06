@@ -1,0 +1,68 @@
+{
+	"code": "200",
+	"data": [
+		{
+			"leaf": true,
+			"pageCode": "dashboard",
+			"pageCodeAlias": "dashboard",
+			"params": {
+				"pageCode": "dashboard"
+			},
+			"parentPageCode": "-1",
+			"title": "首页",
+			"toUrl": "/views/demo/demo-list.json",
+			"icon": "el-icon-eleme"
+		},
+		{
+			"leaf": true,
+			"pageCode": "testcenter",
+			"pageCodeAlias": "testcenter",
+			"params": {
+			},
+			"parentPageCode": "-1",
+			"title": "测试中心",
+			"toUrl": "views/manualManager/manualDirectory.json"
+		},
+		{
+			"leaf": true,
+			"pageCode": "caseManagement",
+			"pageCodeAlias": "caseManagement",
+			"params": {
+			},
+			"parentPageCode": "testcenter",
+			"title": "用例管理",
+			"toUrl": "views/manualManager/manualDirectory.json"
+		},
+		{
+			"leaf": true,
+			"pageCode": "caseAudit",
+			"pageCodeAlias": "caseAudit",
+			"params": {
+			},
+			"parentPageCode": "testcenter",
+			"title": "用例评审",
+			"toUrl": "views/pingshen/index.vue"
+		},
+		{
+			"leaf": true,
+			"pageCode": "planManagement",
+			"pageCodeAlias": "planManagement",
+			"params": {
+			},
+			"parentPageCode": "testcenter",
+			"title": "测试计划",
+			"toUrl": "views/plan/index.vue",
+			"icon": "el-icon-eleme"
+		},
+		{
+			"leaf": true,
+			"pageCode": "caseAudit",
+			"pageCodeAlias": "caseAudit",
+			"parentPageCode": "-1",
+			"title": "自动化测试",
+			"toUrl": "views/caseAudit/caseAuditMain.json",
+			"icon": "el-icon-eleme"
+		}
+	],
+	"message": "操作成功！"
+}

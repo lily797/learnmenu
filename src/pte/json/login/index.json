@@ -1,0 +1,15 @@
+{
+	"module": "login",
+	"layout": {
+		"login":{
+			"title":"模板组件工程",
+			"copyright":"",
+			"logo": "",
+			"###backgroundImg(已弃用)":"src/packages/images/login-left.png",
+			"position":"left",
+			"toRequest":{
+				"url":"/pte/json/layout/login.json"
+			}
+		}
+	}
+}

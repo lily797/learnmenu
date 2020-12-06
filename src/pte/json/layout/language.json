@@ -1,0 +1,13 @@
+{
+  "code":"200",
+	"data": {
+		"zh": {
+			"dashboard": "首页1",
+			"apiTest": "这是api国际化"
+		},
+		"en": {
+			"apiTest": "this is a api langauge"
+		}
+	},
+  "message":"操作成功！"
+}

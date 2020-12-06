@@ -1,0 +1,295 @@
+{
+	"routers": [{
+		"leaf": true,
+		"pageCode": "role-manager",
+		"pageCodeAlias": "role-manager",
+		"params": {
+			"pageCode": "role-manager"
+		},
+		"parentPageCode": "system-manager",
+		"title": "角色管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "application-manager",
+		"pageCodeAlias": "application-manager",
+		"params": {
+			"pageCode": "application-manager"
+		},
+		"parentPageCode": "system-manager",
+		"title": "应用管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "pagedfsdf",
+		"pageCodeAlias": "pagedfsdf",
+		"params": {
+			"toJson": "/pte/json/templatepage_getTemplateData_page.json"
+		},
+		"parentPageCode": "-1",
+		"title": "测试外部js",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "pageLayout",
+		"pageCodeAlias": "pageLayout",
+		"params": {},
+		"parentPageCode": "-1",
+		"title": "前端配置页面开发",
+		"toUrl": "views/modulePage/pageLayout/index"
+	}, {
+		"leaf": true,
+		"pageCode": "assembleForm",
+		"pageCodeAlias": "assembleForm",
+		"params": {
+			"toJson": "/pte/json/v_form_editableDataGrid_btn/index.json"
+		},
+		"parentPageCode": "-1",
+		"title": "提交-编辑表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "dashboard",
+		"pageCodeAlias": "dashboard",
+		"params": {
+			"pageCode": "dashboard"
+		},
+		"parentPageCode": "-1",
+		"title": "首页",
+		"toUrl": "views/dashboard/index.vue"
+	}, {
+		"leaf": true,
+		"pageCode": "test-query",
+		"pageCodeAlias": "test-query",
+		"params": {
+			"toJson": "/pte/json/v_search_btn_datagrid/index.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "查询表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": false,
+		"pageCode": "system-manager",
+		"pageCodeAlias": "system-manager",
+		"params": {},
+		"parentPageCode": "-1",
+		"title": "系统管理",
+		"toUrl": "views/entrance/index"
+	}, {
+		"leaf": true,
+		"pageCode": "test-tabs",
+		"pageCodeAlias": "test-tabs",
+		"params": {
+			"toJson": "/pte/json/dynamicTabs.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "选项卡模板",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "user-manager",
+		"pageCodeAlias": "user-manager",
+		"params": {
+			"pageCode": "user-manager"
+		},
+		"parentPageCode": "system-manager",
+		"title": "用户管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-card",
+		"pageCodeAlias": "test-card",
+		"params": {
+			"toJson": "/pte/json/v_cardList/index.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "卡片列表",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": false,
+		"pageCode": "ui-test",
+		"pageCodeAlias": "ui-test",
+		"params": {},
+		"parentPageCode": "-1",
+		"title": "UI 测试（勿删）",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "dict-manager",
+		"pageCodeAlias": "dict-manager",
+		"params": {
+			"pageCode": "dict-manager"
+		},
+		"parentPageCode": "system-manager",
+		"title": "数据字典管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-mutil-tree",
+		"pageCodeAlias": "test-mutil-tree",
+		"params": {
+			"toJson": "/pte/json/v_selectableTree.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "复选树",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "template-manager",
+		"pageCodeAlias": "template-manager",
+		"params": {
+			"pageCode": "template-manager"
+		},
+		"parentPageCode": "system-manager",
+		"title": "模板管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "i18n-manager",
+		"pageCodeAlias": "i18n-manager",
+		"params": {
+			"pageCode": "i18n-manager"
+		},
+		"parentPageCode": "system-manager",
+		"title": "国际化资源管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-search_dynamic",
+		"pageCodeAlias": "test-search_dynamic",
+		"params": {
+			"toJson": "/pte/json/lr_search_dynamic/lr_search_dynamic.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "动态查询表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "personal",
+		"pageCodeAlias": "personal",
+		"params": {
+			"pageCode": "user-info"
+		},
+		"parentPageCode": "-1",
+		"title": "用户个人信息",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-setSearchform",
+		"pageCodeAlias": "test-setSearchform",
+		"params": {
+			"toJson": "/pte/json/v_form_btn_dynamic/v_form_btn_dynamic.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "表单区域",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "template-component-manager",
+		"pageCodeAlias": "template-component-manager",
+		"params": {
+			"pageCode": "template-component-manager"
+		},
+		"parentPageCode": "system-manager",
+		"title": "区域管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "param-manager",
+		"pageCodeAlias": "param-manager",
+		"params": {
+			"pageCode": "param-manager"
+		},
+		"parentPageCode": "system-manager",
+		"title": "系统参数管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-transfer",
+		"pageCodeAlias": "test-transfer",
+		"params": {
+			"toJson": "/pte/json/lr_transferTable/index.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "穿梭框",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "page-tree",
+		"pageCodeAlias": "page-tree",
+		"params": {
+			"pageCode": "page-tree"
+		},
+		"parentPageCode": "system-manager",
+		"title": "功能页面管理",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-treeMenu",
+		"pageCodeAlias": "test-treeMenu",
+		"params": {
+			"toJson": "/pte/json/tree/lr_tree_dynamic.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "树形菜单模板",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": false,
+		"pageCode": "switchRole",
+		"pageCodeAlias": "switchRole",
+		"params": {
+			"pageCode": "switchRole"
+		},
+		"parentPageCode": "-1",
+		"title": "角色切换",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "eee",
+		"pageCodeAlias": "eee",
+		"params": {
+			"toJson": "/pte/json/tags/v_tags_dynamic.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "动态标签",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-dataTable",
+		"pageCodeAlias": "test-dataTable",
+		"params": {
+			"toJson": "/pte/json/datagrid.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "数据表格",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-params",
+		"pageCodeAlias": "test-params",
+		"params": {
+			"pageCode": "test-params"
+		},
+		"parentPageCode": "ui-test",
+		"title": "测试传参",
+		"toUrl": "views/modulePage/resolver"
+	}, {
+		"leaf": true,
+		"pageCode": "test-editor",
+		"pageCodeAlias": "test-editor",
+		"params": {},
+		"parentPageCode": "ui-test",
+		"title": "测试可编辑表格",
+		"toUrl": "views/editTable/index.vue"
+	}, {
+		"leaf": true,
+		"pageCode": "editSearchForm",
+		"pageCodeAlias": "editSearchForm",
+		"params": {
+			"toJson": "/pte/json/v_search_editableDataGrid/index.json"
+		},
+		"parentPageCode": "ui-test",
+		"title": "查询-编辑表格",
+		"toUrl": "views/modulePage/resolver"
+	}]
+}

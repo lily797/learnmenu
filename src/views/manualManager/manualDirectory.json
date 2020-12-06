@@ -1,0 +1,128 @@
+{
+    "module": "lr-tree-dynamic",
+    "layout": {
+        "tree": {
+            "search": {
+                "enabled": true
+            },
+            "width": "200px",
+            "title": "用例分组",
+            "lazy": false,
+            "hideDynamicArea": false,
+            "idField": "direid",
+            "pIdField": "parent",
+            "labelField": "diname",
+            "isLeafField": "graded",
+            "expandId": [
+                "0"
+            ],
+            "nodeTypeField": "dirtyp",
+            "initRequest": {
+                "url": "/atp/test/dirSel",
+                "method": "post",
+                "params": {
+                    "prcscd": "dirSel",
+                    "tentid": "$g{{globalForm.tentid}}",
+                    "dirtyp": 6
+                }
+            },
+            "root": {
+                "rootNode": {
+                    "name": "查询所有用例",
+                    "value": "0",
+                    "parent": "0"
+                },
+                "toRequest": {
+                    "url": "/views/manualManager/manual_main.json",
+                    "method": "get"
+                },
+                "contextMenu": [
+                    {
+                        "type": "add",
+                        "label": "新增",
+                        "icon": "el-icon-circle-plus-outline",
+                        "childNodeType": "6",
+                        "transmitAllParams": false,
+                        "props": {
+                            "width": "30%",
+                            "title": "新增用例分组"
+                        },
+                        "eventAfter": {
+                            "callback": "renderTree"
+                        }
+                    }
+                ]
+            },
+            "rootTypes": [
+                "6"
+            ],
+            "nodeTypes": {
+                "6": {
+                    "children": [
+                        "6"
+                    ],
+
+                    "icon": "abc",
+                    "contextMenu": [
+                        {
+                            "type": "add",
+                            "label": "新增",
+                            "icon": "el-icon-circle-plus-outline",
+                            "childNodeType": "6",
+                            "transmitAllParams": false,
+                            "props": {
+                                "width": "30%",
+                                "title": "新增用例分组"
+                            },
+                            "eventAfter": {
+                                "callback": "renderTree"
+                            },
+                            "toRequest": {
+                                "url": "/views/manualManager/directory_add.json",
+                                "params": {
+                                    "graded": "${{current.graded}}",
+                                    "direid": "${{current.direid}}",
+                                    "diname": ""
+                                }
+                            }
+                        },
+                        {
+                            "type": "edit",
+                            "label": "编辑",
+                            "icon": "el-icon-edit-outline",
+                            "eventAfter": {
+                                "callback": "renderTree"
+                            },
+                            "props": {
+                                "width": "30%",
+                                "title": "编辑用例分组"
+                            }
+                        },
+                        {
+                            "type": "delete",
+                            "label": "删除",
+                            "icon": "el-icon-remove-outline",
+                            "doRequest": {
+                                "url": "/atp/test/dirDel",
+                                "method": "post",
+                                "params": {
+                                    "prcscd": "dirDel",
+                                    "direid": "${{current.direid}}"
+                                }
+                            },
+                            "eventAfter": {
+                                "callback": "renderTree"
+                            },
+                            "confirm": {
+                                "title": "系统提示",
+                                "msg": "真的要删除该分组吗？",
+                                "confirmButtonText": "确定",
+                                "cancelButtonText": "取消"
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+}

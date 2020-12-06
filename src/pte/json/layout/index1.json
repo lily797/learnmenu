@@ -1,0 +1,187 @@
+{
+  "module": "v-leftMenu-dynamic",
+  "layout": {
+    "appHeader": {
+			"#logo": {
+				"imgPath": "/images/sunline_logo.png",
+				"iconPath": "./src/packages/styles/framework/images/sunline_logo_mini.png"
+			},
+      "fullscreen": true,
+      "notice": {
+        "enable": true,
+        "icon": "iconfont icon--xiaoxi",
+        "type": "danger",
+        "max": 100,
+        "rollPoling": 60,
+        "doRequest": {
+          "url": "/pte/json/layout/logs.json",
+          "method": "get",
+          "resultSet": {
+            "valueField": "num"
+          }
+        },
+        "toRequest": {
+          "url": "/pte/json/v_approval/form.json",
+          "method": "get",
+          "resultSet": {
+            "valueField": "num"
+          }
+        },
+        "props": {
+          "width": "65%",
+          "title": "标题",
+          "close": ""
+        }
+      },
+      "themes": {
+        "enable": true,
+        "options": [
+          {
+            "value": "default"
+          },
+          {
+            "value": "darkBlue"
+          },
+          {
+            "value": "blue"
+          },
+          {
+            "value": "purple"
+          },
+          {
+            "value": "red"
+          }
+        ],
+        "doRequest": {
+          "url":"/pte/json/layout/theme.json"
+        }
+      },
+      "language": {
+        "enable": true,
+        "options": [
+          {
+            "key": "zh",
+            "title": "simplifiedChinese",
+            "icon": "flag-zh"
+          },
+          {
+            "key": "en",
+            "title": "english",
+            "icon": "flag-en"
+          }
+        ],
+        "doRequest": {
+          "url":"/pte/json/layout/language.json"
+        }
+      },
+      "userInfo": [
+        {
+          "type": "custom",
+          "icon": "iconfont icon-iconset0137-copy",
+          "label": "自定义custom",
+          "toRequest": {
+            "url": "user-add",
+            "method": "get",
+            "target":"navTab"
+          },
+          "props": {
+            "width": "65%",
+            "title": "标题"
+          }
+        },
+        {
+          "type": "custom",
+          "icon": "iconfont icon-daochu",
+          "label": "直接发送请求",
+          "doRequest": {
+            "url": "pte/json/layout/logout.json",
+            "method": "get"
+          },
+          "confirm": {
+            "title": "提示信息",
+            "msg": "直接发送请求吗？",
+            "confirmButtonText": "确定",
+            "cancelButtonText": "取消"
+          }
+        },
+        {
+          "type": "lockScreen",
+          "icon": "iconfont icon-suo5",
+          "label": "锁屏",
+          "backgroundUrl": "https://cube.elemecdn.com/6/94/4d3ea53c084bad6931a56d5158a48jpeg.jpeg",
+          "doRequest": {
+            "url": "pte/json/layout/updateToken.json",
+            "method": "get",
+            "params": {
+
+            }
+          }
+        },
+        {
+          "type": "logout",
+          "icon": "el-icon-switch-button",
+          "label": "退出登录",
+          "doRequest": {
+            "url": "pte/json/layout/logout.json"
+          }
+        }
+      ],
+      "logout": {
+        "icon": "el-icon-switch-button",
+        "doRequest": {
+          "url": "pte/json/layout/logout.json"
+        }
+      }
+    },
+    "appSidebar": {
+      "Avatar": {
+        "imageField":"image",
+        "doRequest": {
+          "url":"/pte/json/layout/userInfo.json"
+        },
+        "toRequest": {
+          "url": "user-info",
+          "method": "get",
+          "target":"navTab"
+        },
+        "props": {
+          "width": "65%",
+          "title": "标题"
+        }
+      },
+      "search": {
+        "enable": true
+      },
+      "menu":{
+        "#doRequest": {
+          "url": "/pte/json/layout/menu.json",
+          "method": "get",
+          "resultSet":{
+            "idField": "pageCode",
+            "pIdField": "parentPageCode",
+            "isLeafField": "leaf",
+            "titleField": "title",
+            "targetField": "target",
+            "externalField": "external",
+            "toUrlField": "toUrl",
+            "iconField": "icon"
+          }
+        }
+      }
+    },
+    "appMain": {
+      "showRefresh": false,
+      "showBreadcrumb": false
+    },
+    "appFooter": {
+      "### copyright": "值可以是一个字符串（可以是一个模板字符串变量），或者一个国际化对象，或者info对象自定义多个模板字符创变量的模板",
+      "copyright": {
+        "info": {
+          "template": "$g{{user_info.corpno}} | $g{{user_info.userno}} | $g{{user_info.userName}} | $g{{user_info.deptno}} | $g{{user_info.tradeDate}}",
+          "position": "",
+          "systemDate": "tradeDate"
+        }
+      }
+    }
+  }
+}

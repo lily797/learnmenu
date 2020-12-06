@@ -1,0 +1,17 @@
+{
+	"code": "200",
+	"data": [
+		{
+			"leaf": true,
+			"pageCode": "dashboard",
+			"pageCodeAlias": "dashboard",
+			"params": {
+				"pageCode": "dashboard"
+			},
+			"parentPageCode": "-1",
+			"title": "首页",
+			"toUrl": "@dashboard",
+			"icon": "el-icon-eleme"
+    }
+  ]
+}

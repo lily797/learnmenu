@@ -1,0 +1,154 @@
+{
+  "#### noLogin": "是否需要登录页面： false表示需要登录，true表示没有登录",
+  "noLogin": false,
+  "version": "1.0.0",
+  "productCode": "PTE",
+  "#### isProd": "生产模式开关： false开发模式，true生产模式。 开发模式将打印调试日志等",
+  "isProd": false,
+  "#### isShell": "是否接入Loader页面加载器： false正常登录不接入，true接入Loader",
+  "isShell": false,
+  "#### cancelToken": "是否开启tokeny验证,默认是开启token校验的",
+  "cancelToken": false,
+  "http": {
+    "#### timeout": "HTTP请求响应最大时间（Axios配置）",
+    "timeout": 15000,
+    "successCode": 200
+  },
+  "#### router": "框架内置路由页面配置",
+  "router":{
+    "###mode": "history",
+    "###baseUrl": "/portal/",
+    "#### public": "公共内置跳转的路由（页面）地址",
+    "public": {
+      "login":"/pte/json/login/index.json",
+      "layout": "/pte/json/layout/index2.json",
+      "page401":"@page401",
+      "page404":"@page404",
+      "testdemo22":"/views/personal/index.vue"
+    },
+    "#### routerApi": "获取路由数据接口配置",
+    "#### routerApi backend": "后台测试地址：/BAP/menu/getRouterList",
+    "routerApi":{
+      "doRequest": {
+        "url": "/pte/json/layout/router.json",
+        "method": "get",
+        "resultSet":{
+          "idField": "pageCode",
+          "pIdField": "parentPageCode",
+          "isLeafField": "leaf",
+          "titleField": "title",
+          "#### titleAliasField": "菜单拼接，例如id_title，id会被替换为idField对应的参数，title被替换为titleField对应的参数",
+          "titleAliasField": "title",
+          "targetField": "target",
+          "externalField": "external",
+          "toUrlField":"toUrl",
+          "iconField":"icon"
+        }
+      }
+    }
+  },
+  "#### i18n": "国际化语言配置",
+  "i18n": {
+    "#### languagePackage": "获取国际化语言包后台接口地址。不配置以前端“/public/i18ns”目录下定义为准。",
+    "languagePackage": ""
+  },
+  "#### tokenAuth": "",
+  "tokenAuth": {
+    "#### updateApi": "更新token后台接口",
+    "#### updateApi loader": "接入loader时认证地址：/loader/api/uiAuth/refresh-token",
+    "#### updateApi backend": "后台测试接口/BAP/authentication/updateToken",
+    "updateApi": "/pte/json/layout/updateToken.json",
+    "### tokenDialog": "token验证弹出框模板",
+    "tokenDialog": {
+      "toRequest": {
+        "url": "/pte/json/webLock/index.json",
+        "method": "get"
+      },
+      "title": "登陆提示",
+      "fullscreen": false,
+      "width": "40%"
+    }
+  },
+  "### systemDateFormat": "系统默认日期格式化配置",
+  "systemDateFormat": {
+    "### valueFormat": "提交日期的格式",
+    "### format": "显示的日期格式",
+    "format": "dd-MM-yyyy"
+  },
+  "#### pagination": "全局分页信息相关配置",
+  "pagination": {
+    "pageSizes": [50, 100, 150, 200],
+    "pageSize": 10,
+    "show": true,
+    "pageSizeField":"pageSize",
+    "currentPageField": "pageNumber"
+  },
+  "#### dict": "数据字典接口地址及参数配置",
+  "dict": {
+    "labelField": "label",
+    "valueField": "value",
+    "doRequest": {
+      "url": "",
+      "method": "get"
+    }
+  },
+  "#### message": "message弹出框配置",
+  "#### showClose": "是否显示关闭按钮",
+  "#### duration": "显示时间, 毫秒。设为 0 则不会自动关闭",
+  "#### type": "对应Element-ui弹框类型",
+  "message":[{
+    "type": "success",
+    "showClose": true,
+    "duration": "5000"
+  },
+  {
+    "type": "warning",
+    "showClose": true,
+    "duration": "5000"
+  },
+  {
+    "type": "info",
+    "showClose": true,
+    "duration": "5000"
+  },
+  {
+    "type": "error",
+    "showClose": true,
+    "duration": "0"
+  }],
+  "#### themes": "自定义肤色类型",
+  "#### theme": "主题颜色",
+  "#### value": "肤色的别名， 与布局中的肤色value对应",
+  "#### 系统提供四种主题色配置": [{
+    "theme": "368ee0",
+    "alias": "default"
+  }, {
+    "theme": "1458bd",
+    "alias": "darkBlue"
+  }, {
+    "theme": "081f59",
+    "alias": "blue"
+  }, {
+    "theme": "404359",
+    "alias": "purple"
+  }, {
+    "theme": "cc0000",
+    "alias": "red"
+  }],
+  "themes": [{
+    "theme": "368ee0",
+    "alias": "default"
+  }, {
+    "theme": "1458bd",
+    "alias": "darkBlue"
+  }, {
+    "theme": "081f59",
+    "alias": "blue"
+  }, {
+    "theme": "404359",
+    "alias": "purple"
+  }, {
+    "theme": "cc0000",
+    "alias": "red"
+  }]
+}

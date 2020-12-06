@@ -1,0 +1,238 @@
+{
+  "module":"routerMap",
+  "layout":{
+    "themePath": "default",
+    "sideBarLayout": {
+      "navMenu": [
+        {
+          "path": "",
+          "redirect": "dashboard",
+          "filePath": "views/entrance/index",
+          "children": [
+            {
+              "path": "dashboard",
+              "name": "dashboard",
+              "filePath": "views/dashboard/index.vue",
+              "meta": {
+                "title": "dashboard",
+                "icon": "shouyetianchong"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/personal",
+          "filePath": "views/entrance/index",
+          "hidden": true,
+          "children": [
+            {
+              "path": "",
+              "name": "personal",
+              "filePath": "views/personal/index",
+              "meta": {
+                "title": "personal"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/components",
+          "name": "Components",
+          "filePath": "views/entrance/index",
+          "meta": {
+            "title": "components",
+            "icon": "biaodanzujian-biaoge"
+          },
+          "children": [
+            {
+              "path": "table",
+              "name": "table",
+              "filePath": "views/components/table",
+              "meta": {
+                "title": "table"
+              }
+            },
+            {
+              "path": "dialog",
+              "name": "dialog",
+              "filePath": "views/components/dialog",
+              "meta": {
+                "title": "dialog"
+              }
+            },
+            {
+              "path": "tree",
+              "name": "tree",
+              "filePath": "views/components/tree",
+              "meta": {
+                "title": "tree"
+              }
+            },
+            {
+              "path": "echarts",
+              "name": "echarts",
+              "filePath": "views/components/echarts",
+              "meta": {
+                "title": "echarts"
+              }
+            },
+            {
+              "path": "step",
+              "name": "step",
+              "filePath": "views/components/step",
+              "meta": {
+                "title": "step"
+              }
+            },
+            {
+              "path": "scrollspy",
+              "name": "scrollspy",
+              "filePath": "views/components/scrollspy",
+              "meta": {
+                "title": "scrollspy"
+              }
+            },
+            {
+              "path": "upload",
+              "name": "upload",
+              "filePath": "views/components/upload",
+              "meta": {
+                "title": "upload"
+              }
+            },
+            {
+              "path": "/components_test",
+              "redirect": "/components/components_test/buttonPage",
+              "filePath": "views/entrance/index",
+              "name": "components_test",
+              "meta": {
+                "title": "btnForm",
+                "icon": "activity"
+              },
+              "children": [
+                {
+                  "path": "buttonPage",
+                  "name": "buttonPage",
+                  "filePath": "views/components/button",
+                  "meta": {
+                    "title": "buttons"
+                  }
+                },
+                {
+                  "path": "form",
+                  "name": "form",
+                  "filePath": "views/components/form",
+                  "meta": {
+                    "title": "form"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "path": "/i18n",
+          "filePath": "views/entrance/index",
+          "children": [
+            {
+              "path": "i18n_sub1",
+              "name": "i18n_sub1",
+              "filePath": "views/i18n/index",
+              "meta": {
+                "title": "i18n",
+                "icon": "yanwubaojingqi"
+              }
+            }
+          ]
+        },
+        {
+          "path": "*",
+          "redirect": "/404",
+          "hidden": true,
+          "filePath": "views/errorPage/404"
+        },
+        {
+          "path": "/jraf-template",
+          "filePath": "views/entrance/index",
+          "children": [
+            {
+              "path": "resolver",
+              "name": "resolver",
+              "filePath": "views/modulePage/resolver",
+              "params": {
+                "pageCode": "2"
+              },
+              "meta": {
+                "title": "searchTable",
+                "icon": "form"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/jraf-template1",
+          "filePath": "views/entrance/index",
+          "children": [
+            {
+              "path": "jraftemplate",
+              "name": "jraftemplate",
+              "filePath": "views/modulePage/resolver",
+              "params": {
+                "pageCode": "001"
+              },
+              "meta": {
+                "title": "editTable",
+                "icon": "form"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/jrafTest",
+          "filePath": "views/entrance/index",
+          "children": [
+            {
+              "path": "jrafTest_sub1",
+              "name": "jrafTest_sub1",
+              "filePath": "views/modulePage/test/index",
+              "meta": {
+                "title": "jrafTest",
+                "icon": "form"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/example",
+          "filePath": "views/entrance/index",
+          "children": [
+            {
+              "path": "example_sub1",
+              "name": "example_sub1",
+              "filePath": "views/example/index",
+              "meta": {
+                "title": "example",
+                "icon": "form"
+              }
+            }
+          ]
+        },
+        {
+          "path": "/editTable",
+          "filePath": "views/entrance/index",
+          "children": [
+            {
+              "path": "editTable_sub1",
+              "name": "editTable_sub1",
+              "filePath": "views/editTable/index",
+              "meta": {
+                "title": "editTable",
+                "icon": "activity"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

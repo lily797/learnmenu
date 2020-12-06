@@ -1,0 +1,10 @@
+tests
+build
+public
+doc
+src/fonts
+src/images
+src/styles
+src/themes
+vue.config.js
+.gitlab-ci.yml

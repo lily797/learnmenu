@@ -1,0 +1,45 @@
+[
+  {
+    "proxyUrl": "/BAP",
+    "targetApi": "http://10.22.4.203:9011/",
+    "protocol": "http://",
+    "isModule": false,
+    "notVersion": true,
+    "description": {
+      "zh_CN": "PTE登录代理",
+      "en_US": "PTE login agent"
+    }
+  },
+  {
+    "proxyUrl": "/PTE",
+    "targetApi": "http://10.22.4.203:9901",
+    "protocol": "http://",
+    "isModule": false,
+    "notVersion": true,
+    "description": {
+      "zh_CN": "PTE模板代理",
+      "en_US": "PTE template agent"
+    }
+  },
+  {
+    "proxyUrl": "/getjson",
+    "targetApi": "http://localhost:3000/getjson",
+    "protocol": "http://",
+    "isModule": false,
+    "notVersion": true,
+    "description": {
+      "zh_CN": "PTE模板代理",
+      "en_US": "PTE template agent"
+    }
+  },
+  {
+    "proxyUrl": "/loader",
+    "targetApi": "http://10.22.0.230:8080",
+    "protocol": "http://",
+    "isModule": false,
+    "description": {
+      "zh_CN": "前端加载器后端代理",
+      "en_US": "Front-end loader back-end proxy"
+    }
+  }
+]

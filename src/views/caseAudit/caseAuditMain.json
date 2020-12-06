@@ -1,0 +1,267 @@
+{
+    "module": "v-search-btn-datagrid",
+    "layout": {
+        "form": {
+            "isInitSearch": false,
+            "controls": [
+                {
+                    "audit_result": {
+                        "span": 8,
+                        "control": "select",
+                        "label": "状态：",
+                        "placeholder": "全部",
+                        "dict": {
+                            "dictType": "ATP",
+                            "dictKey": [
+                                "audit_result"
+                            ],
+                            "doRequest": {
+                                "url": "/views/caseAudit/auditStat.json"
+                            }
+                        },
+                        "multiple": true,
+                        "collapseTags": true
+                    },
+                    "audit_create_person": {
+                        "span": 8,
+                        "control": "remoteSelect",
+                        "label": "发起人：",
+                        "placeholder": "全部",
+                        "filterable": true,
+                        "labelField": "relnam",
+                        "valueField": "relnam",
+                        "doRequest": {
+                            "url": "/atp/test/userSelByProj",
+                            "method": "post",
+                            "params": {
+                                "prcscd": "userSelByProj",
+                                "projid": "$g{{globalForm.projid}}"
+                            }
+                        }
+                    },
+                    "audit_persons": {
+                        "span": 8,
+                        "control": "remoteSelect",
+                        "label": "评审人：",
+                        "placeholder": "全部",
+                        "filterable": true,
+                        "labelField": "relnam",
+                        "valueField": "relnam",
+                        "doRequest": {
+                            "url": "/atp/test/userSelByProj",
+                            "method": "post",
+                            "params": {
+                                "prcscd": "userSelByProj",
+                                "projid": "$g{{globalForm.projid}}"
+                            }
+                        }
+                    },
+                    "audit_name": {
+                        "span": 8,
+                        "control": "text",
+                        "label": "评审名称：",
+                        "placeholder": "请输入关键字",
+                        "rules": [
+                            {
+                                "max": 100,
+                                "message": "请输入不多于100个字符"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "toolbar": {
+            "btns": [
+                {
+                    "type": "edit",
+                    "target": "dialog",
+                    "label": "创建评审",
+                    "icon": "el-icon-plus",
+                    "toRequest": {
+                        "method": "get",
+                        "url": "views/caseAudit/caseAuditAdd.json"
+                    },
+                    "props": {
+                        "width": "50%",
+                        "title": "创建评审"
+                    }
+                },
+                {
+                    "type": "delete",
+                    "label": "批量删除",
+                    "icon": "el-icon-close",
+                    "confirm": {
+                        "title": "系统提示",
+                        "msg": "确定要批量删除评审？",
+                        "confirmButtonText": "确定",
+                        "cancelButtonText": "取消"
+                    },
+                    "doRequest": {
+                        "url": "/atp/caseAuditDelete",
+                        "method": "post",
+                        "params": {
+                            "prcscd": "caseAuditDelete",
+                            "tentid": "$g{{globalForm.tentid}}"
+                        }
+                    }
+                }
+            ]
+        },
+        "datagrid": {
+            "doRequest": {
+                "url": "/atp/caseAuditSelect",
+                "method": "post",
+                "params": {
+                    "prcscd": "caseAuditSelect",
+                    "tentid": "$g{{globalForm.tentid}}"
+                }
+            },
+            "pagination": {
+                "show": true,
+                "pageSizes": [
+                    10,
+                    20,
+                    50,
+                    100
+                ],
+                "pageSize": 10
+            },
+            "sortDb": true,
+            "showAndHideColumns": true,
+            "thead": [
+                {
+                    "width": "55",
+                    "type": "selection"
+                },
+                {
+                    "label": "评审名称",
+                    "prop": "audit_name"
+                },
+                {
+                    "label": "状态",
+                    "prop": "audit_result",
+                    "type": "tag",
+                    "align": "center",
+                    "width": "150px",
+                    "switch": {
+                        "0": "warning",
+                        "1": "warning",
+                        "2": "success",
+                        "3": "info"
+                    },
+                    "dict": {
+                        "dictType": "ATP",
+                        "dictKey": [
+                            "AUDIT_STATE"
+                        ],
+                        "labelField": "label",
+                        "valueField": "id"
+                    }
+                },
+                {
+                    "label": "已评",
+                    "align": "center",
+                    "prop": "schedule",
+                    "width": "150px"
+                },
+                {
+                    "label": "发起人",
+                    "align": "center",
+                    "width": "150px",
+                    "prop": "audit_create_person"
+                },
+                {
+                    "label": "创建时间",
+                    "prop": "audit_start_time",
+                    "sortable": true,
+                    "align": "center",
+                    "width": "150px",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                {
+                    "label": "截止日期",
+                    "prop": "audit_plan_end_time",
+                    "sortable": true,
+                    "align": "center",
+                    "width": "150px",
+                    "format": "yyyy-MM-dd HH:mm:ss"
+                },
+                {
+                    "label": "操作",
+                    "width": "130px",
+                    "align": "center",
+                    "btns": [
+                        {
+                            "type": "look",
+                            "tips": "查看",
+                            "icon": "el-icon-search",
+                            "toRequest": {
+                                "url": "views/caseAudit/caseAuditDetail.json",
+                                "target": "navTab"
+                            },
+                            "props": {
+                                "title": "评审详情"
+                            }
+                        },
+                        {
+                            "type": "edit",
+                            "tips": "重新发起",
+                            "icon": "el-icon-refresh-left",
+                            "doRequest": {
+                                "url": "/atp/caseAuditUpdateAuditResult",
+                                "method": "post",
+                                "params": {
+                                    "tentid": "$g{{globalForm.tentid}}",
+                                    "audit_result": "1",
+                                    "prcscd": "caseAuditUpdateAuditResult"
+                                }
+                            },
+                            "show": {
+                                "expression": "('${{audit_result}}'==='2'||'${{audit_result}}'==='3')&&'${{audit_create_person}}'=='$g{{userInfo.relnam}}'"
+                            }
+                        },
+                        {
+                            "type": "edit",
+                            "tips": "编辑",
+                            "icon": "el-icon-edit",
+                            "toRequest": {
+                                "url": "/views/caseAudit/caseAuditEdit.json",
+                                "method": "",
+                                "params": {
+                                    "tentid": "$g{{globalForm.tentid}}"
+                                }
+                            },
+                            "props": {
+                                "width": "50%",
+                                "title": "编辑评审"
+                            },
+                            "show": {
+                                "expression": "('${{audit_result}}'==='0'||'${{audit_result}}'==='1')&&'${{audit_create_person}}'=='$g{{userInfo.relnam}}'"
+                            }
+                        },
+                        {
+                            "type": "delete",
+                            "tips": "删除",
+                            "icon": "el-icon-delete",
+                            "confirm": {
+                                "title": "系统提示",
+                                "msg": "删除后无法撤销，请确认 ？"
+                            },
+                            "show": {
+                                "expression": "'${{audit_create_person}}'=='$g{{userInfo.relnam}}'"
+                            },
+                            "doRequest": {
+                                "url": "/atp/caseAuditDelete",
+                                "method": "post",
+                                "params": {
+                                    "prcscd": "caseAuditDelete"
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

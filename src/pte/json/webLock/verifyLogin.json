@@ -1,0 +1,19 @@
+{
+	"code": "200",
+	"data": {
+		"access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJib2R5Ijoie1wiaWRlbnRpdHlcIjpcImFkbWluXCIsXCJpc3NcIjpcIlN1bmxpbmVcIixcInR5cGVcIjpcImFjY2Vzc1wiLFwiZnJlc2hcIjpmYWxzZSxcImlhdFwiOjE1NTQzNTgyMDc5MzYsXCJqdGlcIjpcImJmYmJjMGU4LWVmOTQtNDA2My1iNDQ4LWE4ZWI1OTFkMTQ4MFwifSIsImV4cCI6MTU1NDM2MDAwN30.8NoKToouX4XEP-UcHmO25rvLEJGWuQ8IWbj3_I3bWe8",
+		"refresh_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJib2R5Ijoie1wiaWRlbnRpdHlcIjpcImFkbWluXCIsXCJpc3NcIjpcIlN1bmxpbmVcIixcInR5cGVcIjpcInJlZnJlc2hcIixcImlhdFwiOjE1NTQzNTgyMDc5MzcsXCJqdGlcIjpcImRmNWE0MjE1LWIxY2YtNDY3Yy05ZmUyLWUwMjUwNGQyYzc0MFwifSIsImV4cCI6MTU1NDM2MDYwN30.ty3hpwTBokXJPGMXiRdHA67NYRdyFmXH8x-D8ttfQn0",
+		"user_info": {
+			"language": "zh_CN",
+			"layout": "pte/json/layout/index1.json",
+			"pageSize": 10,
+			"skinCode": "mazarine",
+			"userCode": "admin",
+			"userName": "系统管理员",
+			"corpno": "dashboard",
+			"userno": 2019,
+			"deptno": 22222
+		}
+	},
+	"message": "操作成功！"
+}

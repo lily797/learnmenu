@@ -1,0 +1,32 @@
+{
+    "code": "200",
+    "data": {
+        "routers": [
+            {
+                "icon": "shouye2",
+                "leaf": true,
+                "pageCode": "dashboard",
+                "pageCodeAlias": "dashboard",
+                "params": {
+                    "pageCode": "dashboard"
+                },
+                "parentPageCode": "-1",
+                "title": "首页",
+                "toUrl": "@dashboard"
+            },
+            {
+                "icon": "useraccount",
+                "leaf": true,
+                "pageCode": "personal",
+                "pageCodeAlias": "personal",
+                "params": {
+                    "pageCode": "personal"
+                },
+                "parentPageCode": "-1",
+                "title": "用户信息",
+                "toUrl": "@personal"
+            }
+        ]
+    },
+    "message": "操作成功！"
+}

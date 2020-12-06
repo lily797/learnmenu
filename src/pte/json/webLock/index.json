@@ -1,0 +1,72 @@
+{
+	"module": "v_inputDataForm_btn",
+	"layout": {
+		"form": {
+			"doRequest": {
+				"url":"/pte/json/webLock/verifyLogin.json",
+				"method":"get",
+				"data":{},
+				"target":""
+			},
+			"controls": [
+        {
+          "user": {
+            "autocomplete": "off",
+            "span": 12,
+            "control": "hidden",
+            "label": ""
+          }
+        },
+				{
+					"user": {
+						"span": 12,
+						"autocomplete": "off",
+						"control": "text",
+						"label": "用户名"
+          }
+				},
+				{
+					"password": {
+						"autocomplete": "off",
+						"span": 12,
+						"control": "hidden",
+						"label": ""
+          }
+        },
+        {
+          "password": {
+						"span": 12,
+						"autocomplete": "off",
+						"control": "text",
+						"label": "密码",
+						"rules": [{
+								"required": true,
+								"message": "请输入"
+							}
+						]
+          }
+        },
+        {
+					"checkbox": {
+						"control": "select",
+						"label": "自定义选择项",
+						"options": [{
+								"label": "选项一",
+								"value": "checkbox1"
+							},
+							{
+								"label": "选项二",
+								"value": "checkbox2"
+							},
+							{
+								"label": "选项三",
+								"value": "checkbox3",
+								"disabled": true
+							}
+						]
+          }
+        }
+			]
+		}
+	}
+}

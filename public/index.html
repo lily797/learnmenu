@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>vue模板引擎工程</title>
+  <!--[if IE 9]> <link rel="stylesheet" href="./css/hack.css"> <![endif]-->
+  <style type="text/css">
+    /*加载中*/
+    #_loading {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      z-index: 9999;
+    }
+
+    #_loading .loading-mask {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      background: #000;
+      opacity: 0.5;
+    }
+
+    #_loading .loading-box {
+      position: absolute;
+      left: 50%;
+      margin-left: -100px;
+      opacity: 0.95;
+      width: 200px;
+      height: 200px;
+      border-radius: 20px;
+      top: 50%;
+      margin-top: -110px;
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    #_loading .loading-box .loading-content {
+      position: absolute;
+      width: 70px;
+      height: 70px;
+      margin-top: -40px;
+      margin-left: -40px;
+      border: 5px dotted #fff;
+      opacity: 0.5;
+      top: 50%;
+      left: 50%;
+      border-radius: 120px;
+    }
+
+    #_loading .loading-box .animate-spin {
+      -webkit-animation-duration: 3s;
+      -webkit-animation-name: spin;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+    #_loading .loading-box .loading-content-outer {
+      position: absolute;
+      width: 120px;
+      height: 120px;
+      border: 2px solid rgba(255, 255, 255, 0.2);
+      border-left-color: transparent;
+      border-right-color: transparent;
+      top: 50%;
+      left: 50%;
+      margin-left: -60px;
+      margin-top: -60px;
+      border-radius: 180px;
+    }
+
+    #_loading .loading-box .animate-spin-outer {
+      -webkit-animation-duration: 1.5s;
+      -webkit-animation-name: spin;
+      -webkit-animation-timing-function: linear;
+      -webkit-animation-iteration-count: infinite;
+    }
+
+    #_loading .loading-box .text {
+      position: absolute;
+      color: #fff;
+      top: 50%;
+      margin-top: -10px;
+      width: 100%;
+      opacity: 0.8;
+      line-height: 20px;
+      font-size: 15px;
+      text-align: center;
+    }
+
+    @keyframes spin {
+      0% {
+        -webkit-transform: rotate(0);
+      }
+
+      50% {
+        -webkit-transform: rotate(180deg);
+      }
+
+      100% {
+        -webkit-transform: rotate(359deg);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <noscript>
+    <strong>We're sorry but edsp-pte-ui doesn't work properly without JavaScript enabled. Please enable it to
+      continue.</strong>
+  </noscript>
+  <div id="app"></div>
+  <div id="_loading">
+    <div class="loading-mask"></div>
+    <div class="loading-box">
+      <div class="loading-content animate-spin"></div>
+      <div class="loading-content-outer animate-spin-outer"></div>
+      <div class="text" id="loadingText">加载中</div>
+    </div>
+  </div>
+  <!-- built files will be auto injected -->
+  <script>
+    var curLocale = localStorage.getItem('PTE_LANGUAGE_STYLE') || 'en';
+    if (curLocale === 'en') {
+      document.getElementById('loadingText').innerHTML = "Loading";
+    } else {
+      document.getElementById('loadingText').innerHTML = "加载中";
+    }
+  </script>
+</body>
+
+</html>

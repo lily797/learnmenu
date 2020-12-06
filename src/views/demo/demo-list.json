@@ -1,0 +1,90 @@
+{
+    "module": "v-search-btn-datagrid",
+    "layout": {
+        "form": {
+            "controls": [
+                {
+                    "name": {
+                        "control": "text",
+                        "label": "姓名",
+                        "value": "",
+                        "placeholder": "请输入姓名关键字"
+                    },
+                    "sex": {
+                        "control": "radio",
+                        "label": "性别",
+                        "value": "man",
+                        "options": [
+                            {
+                                "label": "男",
+                                "value": "man"
+                            },
+                            {
+                                "label": "女",
+                                "value": "woman"
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "toolbar": {
+            "btns": [
+                {
+                    "type": "add",
+                    "label": "新增人员",
+                    "toRequest": {
+                        "url": "",
+                        "method": "get",
+                        "params": {}
+                    },
+                    "props": {
+                        "width": "65%",
+                        "title": "新增人员",
+                        "close": ""
+                    }
+                }
+            ]
+        },
+        "datagrid": {
+            "doRequest": {
+                "url": "/demo/demo/data",
+                "method": "get",
+                "params": {}
+            },
+            "pagination": {
+                "show": true,
+                "pageSizes": [
+                    10,
+                    20,
+                    50,
+                    100
+                ],
+                "pageSize": 10
+            },
+            "maxHeight": 500,
+            "thead": [
+                {
+                    "type": "index",
+                    "label": "序号"
+                },
+                {
+                    "label": "姓名",
+                    "prop": "name",
+                    "sortable": true
+                },
+                {
+                    "label": "性别",
+                    "prop": "sex"
+                }
+            ]
+        },
+        "alert": {
+            "title": "说明",
+            "description": [
+                "<p style='color:red'>入门示例</p>",
+                "说明内容"
+            ]
+        }
+    }
+}
