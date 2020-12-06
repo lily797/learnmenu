@@ -30,3 +30,27 @@ yarn lint
 yarn test
 
 ```
+
+
+
+
+<!-- git的操作 -->
+	git log 查看所有提交
+	git branch 查看当前分支
+	git branch wanghanjun  创建wagnhanjun分支
+	git checkout wanghanjun	切换到wanghanjun分支
+	git branch 查看当前分支
+	git push origin wanghanjun 	将wanghanjun分支提交到远程
+								这里会输入 用户名和密码
+								输入成功后将新建立的分支提交到远程
+
+
+    git remote add origin 远程项目地址
+    git push origin master                  将本地仓库传到远程
+
+
+<!-- linux操作文件 -->
+
+   i 进入编辑文件
+   esc退出编辑模式
+   :wq保存并退出
